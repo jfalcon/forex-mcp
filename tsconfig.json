@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "allowJs": true,                          // allow JavaScript files to be compiled
+    "baseUrl": ".",                           // base directory to resolve non-relative modules
+    "esModuleInterop": true,                  // import non-ES modules as default imports
+    "forceConsistentCasingInFileNames": true, // ensure consistent casing in file names
+    "incremental": true,                      // only build modified files when compiling
+    "isolatedModules": true,                  // disallow features that require cross-file awareness
+    "lib": ["DOM", "DOM.iterable", "ESNext"], // explicitly set default type definitions
+    "module": "ESNext",                       // module system to output (CommonJS, ESNext, etc.)
+		"moduleDetection": "force",               // treat files as modules even without import/export
+    "moduleResolution": "bundler",            // do not require extension on imported relative paths
+    "noEmit": true,                           // do not emit any output (can set 'incremental')
+    "paths": {                                // relative to baseUrl
+      "@/*": ["./app/*"],
+      "!/*": ["./*"]
+    },
+    "resolveJsonModule": true,                // allows importing modules with a '.json' extension
+    "rootDir": "app",                         // specify the root directory of input files
+    "skipLibCheck": true,                     // only check used library code
+    "strict": true,                           // strict type checking for null, this, etc.
+    "target": "ES2022",                       // the ECMAScript version to output
+    "tsBuildInfoFile":                        // location of incremental build information
+      "./node_modules/.tsbuildinfo"
+  },
+  "include": ["app/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

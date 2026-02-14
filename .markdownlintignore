@@ -1,0 +1,21 @@
+# cache directories
+.cache/
+.git/
+.svn/
+cache/
+
+# dependency directories
+node_modules/
+
+# output directories
+/.bin/
+/.build/
+/.compiled/
+/.dist/
+/.next/
+/.out/
+/bin/
+/build/
+/compiled/
+/dist/
+/out/

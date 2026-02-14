@@ -1,0 +1,73 @@
+{
+  "version": "0.2",
+  "allowCompoundWords": true,
+  "enabledLanguageIds": [
+    "asciidoc",
+    "git-commit",
+    "javascript",
+    "json",
+    "jsonc",
+    "markdown",
+    "plaintext",
+    "shellscript",
+    "text",
+    "typescript",
+    "toml",
+    "yaml",
+    "yml"
+  ],
+  "dictionaries": [
+    "corp-terms",
+    "fonts",
+    "spanish"
+  ],
+  "ignorePaths": [
+    "**/.bin/",
+    "**/.build/",
+    "**/.cache/",
+    "**/.compiled/",
+    "**/.dist/",
+    "**/.git/",
+    "**/.hooks/",
+    "**/.idea/",
+    "**/.next/",
+    "**/.npm/",
+    "**/.out/",
+    "**/.svn/",
+    "**/.vs/",
+    "**/.vscode/",
+    "**/bin/",
+    "**/build/",
+    "**/cache/",
+    "**/compiled/",
+    "**/dist/",
+    "**/node_modules/",
+    "**/*.code-workspace"
+  ],
+  "ignoreRegExpList": [
+    "/^.*@import\\s*\\(.*\\).*$/gmi",
+    "/\\b[0-9A-Z\\/\\-_]+\\b/gm"
+  ],
+  "language": "en",
+  "words": [
+    "Forex",
+    "Ollama"
+  ],
+  "ignoreWords": [
+    "APIV",
+    "aaddrick",
+    "anythingllm",
+    "cpus",
+    "duckdb",
+    "geminicli",
+    "initdb",
+    "jspm",
+    "lencx",
+    "lmstudio",
+    "nomic",
+    "openwebui",
+    "pgvector",
+    "trixie",
+    "webui"
+  ]
+}

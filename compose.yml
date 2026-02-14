@@ -1,0 +1,5 @@
+# note: on Linux the docker compose plugin must be installed separately
+# this allows us to break up compose files into multiple parts
+include:
+  - ./containers/compose.ollama.yml
+  - ./containers/compose.webui.yml

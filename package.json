@@ -1,0 +1,51 @@
+{
+  "author": "Jeremy Falcon",
+  "description": "A lightweight, local-first MCP server for Forex market intelligence.",
+  "engineStrict": true,
+  "license": "MIT",
+  "name": "forex-mcp",
+  "title": "Forex MCP Server",
+  "type": "module",
+  "version": "0.1.0",
+  "bin": {
+    "fcp": "./dist/index.mjs"
+  },
+  "engines": {
+    "node": ">= 25.6.1",
+    "npm": ">= 11.10.0"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development tsx watch --import dotenv/config app/index.ts",
+    "build": "tsc && NODE_ENV=production node esbuild.config.mjs",
+    "inspect:dev": "NODE_ENV=development tsx --import dotenv/config app/index.ts",
+    "inspect": "DANGEROUSLY_OMIT_AUTH=true npx @modelcontextprotocol/inspector npm run inspect:dev --silent",
+    "lint": "eslint .",
+    "serve": "npm run build && NODE_ENV=production node dist/index.mjs --sse",
+    "start": "npm run build && NODE_ENV=production node dist/index.mjs",
+    "test": "echo \"No tests\" && exit 0"
+  },
+  "dependencies": {
+    "@duckdb/node-api": "^1.4.4-r.1",
+    "@modelcontextprotocol/sdk": "^1.27.0",
+    "commander": "^14.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "openapi-types": "^12.1.3",
+    "technicalindicators": "^3.1.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@modelcontextprotocol/inspector": "^0.20.0",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.3",
+    "dotenv": "^17.2.4",
+    "esbuild": "^0.27.3",
+    "eslint": "^9.39.2",
+    "globals": "^17.3.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.55.0"
+  }
+}
